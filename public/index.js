@@ -69,6 +69,7 @@ document.addEventListener('click', function(event) {
     let button = event.target.closest('.cek')
     if (button) {
         let parentDiv = button.closest('.list')
+        parentDiv = parentDiv.parentElement
         parentDiv.remove()
         let left = parentDiv.querySelector('.left')
         let newdone = document.createElement('div')
